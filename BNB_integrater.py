@@ -36,6 +36,13 @@ for row in tweets.itertuples():
         reply_averages.append(num_tweet_replies / num_tweets)
         quotes_averages.append(num_tweet_replies / num_tweets)
 
+hours.append(current_hour)
+tweet_counts.append(num_tweets)
+like_averages.append(num_tweet_likes / num_tweets)
+retweet_averages.append(num_tweet_retweets / num_tweets)
+reply_averages.append(num_tweet_replies / num_tweets)
+quotes_averages.append(num_tweet_replies / num_tweets)
+
 df = pd.DataFrame({'Date': hours, 'Number_of_Tweets': tweet_counts, 'Average_Number_of_Likes': like_averages,
                    'Average_Number_of_Retweets': retweet_averages, 'Average_Number_of_Replies': reply_averages,
                    'Average_Number_of_Quotes': quotes_averages})
